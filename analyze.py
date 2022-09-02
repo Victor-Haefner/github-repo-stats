@@ -151,8 +151,9 @@ def main() -> None:
     )
 
     # Use the same x (time) axis limit as for view/clone plots further above.
-    analyse_top_x_snapshots("referrer", gen_date_axis_lim((df_vc_agg,)))
-    analyse_top_x_snapshots("path", gen_date_axis_lim((df_vc_agg,)))
+    # below line fails because too big
+    #analyse_top_x_snapshots("referrer", gen_date_axis_lim((df_vc_agg,)))
+    #analyse_top_x_snapshots("path", gen_date_axis_lim((df_vc_agg,)))
 
     gen_report_footer()
     finalize_and_render_report()
