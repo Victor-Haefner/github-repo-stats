@@ -219,7 +219,7 @@ git add ghrs-data/forks.csv ghrs-data/stargazers.csv || echo "git add failed, ig
 git commit -m "ghrs: stars and forks ${UPDATE_ID} for ${STATS_REPOSPEC}" || echo "commit failed, ignore  (continue)"
 
 echo "Translate HTML report into PDF, via headless Chrome"
-python "${GHRS_FILES_ROOT_PATH}/pdf.py" latest-report/report_for_pdf.html latest-report/report.pdf
+# python "${GHRS_FILES_ROOT_PATH}/pdf.py" latest-report/report_for_pdf.html latest-report/report.pdf
 
 # Add directory contents (markdown, HTML, PDF).
 git add latest-report
@@ -233,7 +233,7 @@ cat << EOF > README.md
 - managed by GitHub Action: https://github.com/jgehrcke/github-repo-stats
 - workflow that created this README: \`${GITHUB_WORKFLOW}\`
 
-**Latest report PDF**: [report.pdf](https://github.com/${DATA_REPOSPEC}/raw/${DATA_BRANCH_NAME}/${STATS_REPOSPEC}/latest-report/report.pdf)
+**Latest report**: [report.html](https://github.com/${DATA_REPOSPEC}/raw/${DATA_BRANCH_NAME}/${STATS_REPOSPEC}/latest-report/report.html)
 
 EOF
 
